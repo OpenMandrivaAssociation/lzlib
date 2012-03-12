@@ -48,6 +48,7 @@ Pavlov. For a description of the LZMA algorithm, see the lzip manual.
 Summary:        A compression library for lzip files
 Group:          Development/C
 Requires:       %{libname} = %{version}
+Provides:	%{name}-devel = %{EVRD}
 
 %description -n %{develname}
 The lzlib compression library provides in-memory LZMA compression
