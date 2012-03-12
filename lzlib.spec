@@ -12,6 +12,7 @@ License:	GPLv3+
 Group:		System/Libraries
 URL:		http://www.nongnu.org/lzip/lzlib.html
 Source0:	http://download.savannah.gnu.org/releases/lzip/%{name}-%{version}.tar.lz
+BuildRequires:	lzip
 
 %description
 The lzlib compression library provides in-memory LZMA compression
