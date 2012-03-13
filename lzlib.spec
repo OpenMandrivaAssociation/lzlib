@@ -106,3 +106,6 @@ Pavlov. For a description of the LZMA algorithm, see the lzip manual.
 pushd %{buildroot}%{_libdir}/
 ln -s liblz.so.%{major} liblz.so
 popd
+
+%check
+make check
