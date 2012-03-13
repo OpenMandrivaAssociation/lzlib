@@ -7,7 +7,7 @@
 Name:		lzlib
 Summary:	A compression library for lzip files
 Version:	1.2
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		System/Libraries
 URL:		http://www.nongnu.org/lzip/lzlib.html
@@ -103,4 +103,6 @@ Pavlov. For a description of the LZMA algorithm, see the lzip manual.
 
 %install
 %makeinstall_std
-ln -s %{buildroot}%{_libdir}/liblz.so.%{major} %{buildroot}%{_libdir}/liblz.so
+pushd %{buildroot}%{_libdir}/
+ln -s liblz.so.%{major} liblz.so
+popd
