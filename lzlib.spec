@@ -6,7 +6,7 @@
 
 Name:		lzlib
 Summary:	A compression library for lzip files
-Version:	1.2
+Version:	1.3
 Release:	2
 License:	GPLv3+
 Group:		System/Libraries
@@ -67,11 +67,13 @@ Pavlov. For a description of the LZMA algorithm, see the lzip manual.
 %{_includedir}/*
 %doc AUTHORS ChangeLog NEWS README
 
+%if %{mdvver} < 201200
 %post -n %{develname}
 %_install_info
 
 %postun -n %{develname}
 %_remove_install_info
+%endif
 
 #------------------------------------------------------------------------------
 
