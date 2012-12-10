@@ -111,3 +111,21 @@ popd
 
 %check
 make check
+
+
+%changelog
+* Tue Apr 10 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 1.3-2
++ Revision: 790244
+- update to 1.3
+- run make check after build
+
+* Tue Mar 13 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 1.2-2
++ Revision: 784542
+- fix symlink in devel package
+
+* Mon Mar 12 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 1.2-1
++ Revision: 784427
+- BR fixed
+- fix devel provides
+- imported package lzlib
+
