@@ -7,7 +7,7 @@
 Name:		lzlib
 Summary:	A compression library for lzip files
 Version:	1.3
-Release:	2
+Release:	3
 License:	GPLv3+
 Group:		System/Libraries
 URL:		http://www.nongnu.org/lzip/lzlib.html
