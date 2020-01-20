@@ -1,6 +1,6 @@
 %define dont_remove_libtool_files 1
 %define major 1
-%define libname %mklibname lz %major
+%define libname %mklibname lz %{major}
 %define develname %mklibname lz -d
 
 Name:		lzlib
@@ -26,8 +26,8 @@ Pavlov. For a description of the LZMA algorithm, see the lzip manual.
 #------------------------------------------------------------------------------
 
 %package -n %{libname}
-Summary:        A compression library for lzip files
-Group:          System/Libraries
+Summary:	A compression library for lzip files
+Group:		System/Libraries
 
 %description -n %{libname}
 The lzlib compression library provides in-memory LZMA compression
@@ -45,9 +45,9 @@ Pavlov. For a description of the LZMA algorithm, see the lzip manual.
 #------------------------------------------------------------------------------
 
 %package -n %{develname}
-Summary:        A compression library for lzip files
-Group:          Development/C
-Requires:       %{libname} = %{version}
+Summary:	A compression library for lzip files
+Group:		Development/C
+Requires:	%{libname} = %{version}
 Provides:	%{name}-devel = %{EVRD}
 
 %description -n %{develname}
@@ -69,12 +69,12 @@ Pavlov. For a description of the LZMA algorithm, see the lzip manual.
 #------------------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure --enable-shared
 sed -i -e 's|^CC =.*|CC = %{__cc}|;s|^CFLAGS =.*|CFLAGS = %{optflags}|;s|^LDFLAGS =.*|LDFLAGS = %{ldflags}|' Makefile
-%make
+%make_build
 
 %install
 %make_install
