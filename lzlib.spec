@@ -9,7 +9,7 @@ Version:	1.14
 Release:	1
 License:	GPLv3+
 Group:		System/Libraries
-URL:		http://www.nongnu.org/lzip/lzlib.html
+URL:		https://www.nongnu.org/lzip/lzlib.html
 Source0:	http://download.savannah.gnu.org/releases/lzip/lzlib/lzlib-%{version}.tar.lz
 BuildRequires:	lzip
 
