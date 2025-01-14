@@ -5,7 +5,7 @@
 
 Name:		lzlib
 Summary:	A compression library for lzip files
-Version:	1.14
+Version:	1.15
 Release:	1
 License:	GPLv3+
 Group:		System/Libraries
