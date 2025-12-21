@@ -11,6 +11,11 @@ License:	GPLv3+
 Group:		System/Libraries
 URL:		https://www.nongnu.org/lzip/lzlib.html
 Source0:	http://download.savannah.gnu.org/releases/lzip/lzlib/lzlib-%{version}.tar.lz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	lzip
 
 %description
