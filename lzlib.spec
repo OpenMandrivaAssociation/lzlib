@@ -1,19 +1,18 @@
-%define dont_remove_libtool_files 1
 %define major 1
-%define libname %mklibname lz %{major}
+%define oldlibname %mklibname lz 1
+%define libname %mklibname lz
 %define develname %mklibname lz -d
 
 Name:		lzlib
 Summary:	A compression library for lzip files
-Version:	1.15
+Version:	1.16
 Release:	1
 License:	GPLv3+
 Group:		System/Libraries
 URL:		https://www.nongnu.org/lzip/lzlib.html
-Source0:	http://download.savannah.gnu.org/releases/lzip/lzlib/lzlib-%{version}.tar.lz
+Source0:	https://download-mirror.savannah.gnu.org/releases/lzip/lzlib/lzlib-%{version}.tar.lz
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool-base
 BuildRequires:	slibtool
 BuildRequires:	make
 BuildRequires:	lzip
@@ -33,6 +32,8 @@ Pavlov. For a description of the LZMA algorithm, see the lzip manual.
 %package -n %{libname}
 Summary:	A compression library for lzip files
 Group:		System/Libraries
+# Renamed 2026-03-13 after 6.0
+%rename %{oldlibname}
 
 %description -n %{libname}
 The lzlib compression library provides in-memory LZMA compression
@@ -85,4 +86,4 @@ sed -i -e 's|^CC =.*|CC = %{__cc}|;s|^CFLAGS =.*|CFLAGS = %{optflags}|;s|^LDFLAG
 %make_install
 
 %check
-%make check
+%make_build check
